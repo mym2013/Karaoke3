@@ -123,13 +123,6 @@ public class KaraokeMachine {
     return choice - 1;
 		
   }
-    
-    
-    
-    
-    
-    
-   
 
 }
 
