@@ -116,7 +116,12 @@ public class KaraokeMachine {
 		
     int choice = Integer.parseInt(optionAsString.trim());
     System.out.print("Your choice:   ");
+		
+// la unica razon para comenzar con la opocióm  desde menos 1 es por que la lista comiemza en base cero, por lo  que debemos dejar un espacio menjos para poder hacer nuestro trabajo.
+
+//  we are gonna return choice menus one, bacause we know it´s zero based, but we started at one, so we need to take one off of that. 		
     return choice - 1;
+		
   }
     
     
