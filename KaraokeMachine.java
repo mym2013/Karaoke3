@@ -109,8 +109,11 @@ public class KaraokeMachine {
       counter++;
     }
 	// en este punto se lee desde la consola la opción ingresada por el cliente
-		// At this stage  the code it read from the console the input option selected by the client.
+ // At this stage  the code it read from the console the input option selected by the client.
     String optionAsString = mReader.readLine();
+// la funcion trim() permite validar los espacios en blanco, asi no tengo problemas de validación de la clave por espacios en blanco
+//	the trim() function allow you to validate the blank left by the client, some issues can arise from this, so tims() helps to avoid it
+		
     int choice = Integer.parseInt(optionAsString.trim());
     System.out.print("Your choice:   ");
     return choice - 1;
