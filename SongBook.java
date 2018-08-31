@@ -28,15 +28,16 @@ public class SongBook {
     Map<String, List<Song>> byArtist = new HashMap<>();
     for (Song song : mSongs) {
       List<Song> artistSongs = byArtist.get(song.getArtist());
-      if (artistSongs == null) {
 	// indicar que el atajo de la línea 28<> es sólo valido para java 7 hacia arriba
-		// just to point out that this shorthand is only available on java  7 and higher		
-				
+	// just to point out that this shorthand is only available on java  7 and higher		
+  if (artistSongs == null) {
         artistSongs = new ArrayList<>();
         byArtist.put(song.getArtist(), artistSongs);
       }
       artistSongs.add(song);
     }
+		// las lineas 33 a las 38, hacen en caso de que no exista el artista en la lista o arreglo, la creación de una nueva lista o areglo, y le agrega ese artista q no está ( esta un poco enredado, hay que ver si funciona
+		// lines 33 to 38 shows how to create a new list or aarray in case of null is detected on if statemnt, maybe a litle confusing, but let see if it works.
     return byArtist;
   }
   
