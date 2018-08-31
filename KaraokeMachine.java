@@ -70,7 +70,7 @@ public class KaraokeMachine {
       }
     } while(!choice.equals("quit"));
   }
-    
+	
   private Song promptNewSong() throws IOException {
     System.out.print("Enter the artist's name:  ");
     String artist = mReader.readLine();
@@ -97,13 +97,19 @@ public class KaraokeMachine {
     int index = promptForIndex(songTitles);
     return songs.get(index);
   }
-  
+  // este método o función, es creadp para recibir una lista de cannciones y luego asignar un número a cada item o canción
+	// this function has being created to get a list of songs and then we assign a number to each item on the list
   private int promptForIndex(List<String> options) throws IOException {
     int counter = 1;
+		
+// con este for se muestran todas las opciones y se le asigna el numero de posición por asi decirlo a cada ítem.
+// whith this  for loop. we can show all the options (wich are songs) 	and it is gived a number of positions.	 
     for (String option : options) {
       System.out.printf("%d.)  %s %n", counter, option);
       counter++;
     }
+	// en este punto se lee desde la consola la opción ingresada por el cliente
+		// At this stage  the code it read from the console the input option selected by the client.
     String optionAsString = mReader.readLine();
     int choice = Integer.parseInt(optionAsString.trim());
     System.out.print("Your choice:   ");
