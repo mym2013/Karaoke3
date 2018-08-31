@@ -23,10 +23,15 @@ public class SongBook {
   
   // FIXME:  This should be cached!
   private Map<String, List<Song>> byArtist() {
+		//
+		
     Map<String, List<Song>> byArtist = new HashMap<>();
     for (Song song : mSongs) {
       List<Song> artistSongs = byArtist.get(song.getArtist());
       if (artistSongs == null) {
+	// indicar que el atajo de la línea 28<> es sólo valido para java 7 hacia arriba
+		// just to point out that this shorthand is only available on java  7 and higher		
+				
         artistSongs = new ArrayList<>();
         byArtist.put(song.getArtist(), artistSongs);
       }
