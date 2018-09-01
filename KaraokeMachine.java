@@ -94,6 +94,7 @@ public class KaraokeMachine {
     for (Song song : songs) {
       songTitles.add(song.getTitle());
     }
+		System.out.printf("Available songs or %s: %n", artist);
     int index = promptForIndex(songTitles);
     return songs.get(index);
   }
