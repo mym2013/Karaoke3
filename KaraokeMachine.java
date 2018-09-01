@@ -103,7 +103,7 @@ public class KaraokeMachine {
     int counter = 1;
 		
 // con este for se muestran todas las opciones y se le asigna el numero de posición por asi decirlo a cada ítem.
-// whith this  for loop. we can show all the options (wich are songs) 	and it is gived a number of positions.	 
+// whith this  for loop. we can show all the options (wich are songs) 	and it is gived a number of position.	 
     for (String option : options) {
       System.out.printf("%d.)  %s %n", counter, option);
       counter++;
