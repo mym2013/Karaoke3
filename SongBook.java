@@ -29,7 +29,7 @@ public class SongBook {
     for (Song song : mSongs) {
       List<Song> artistSongs = byArtist.get(song.getArtist());
 	// indicar que el atajo de la línea 28<> es sólo valido para java 7 hacia arriba
-	// just to point out that this shorthand is only available on java  7 and higher		
+	// just to point out that this shorthand  on line 28, is only available on java  7 and higher		
   if (artistSongs == null) {
         artistSongs = new ArrayList<>();
         byArtist.put(song.getArtist(), artistSongs);
