@@ -80,7 +80,7 @@ public class KaraokeMachine {
     String videoUrl = mReader.readLine();
     return new Song(artist, title, videoUrl);
   }
-  
+  // en esta parte del código estamos buscando canciones por artistas // on this code stage, we are looking for a particular artist
   private String promptArtist() throws IOException {
     System.out.println("Available artists:");
     List<String> artists = new ArrayList<>(mSongBook.getArtists());
